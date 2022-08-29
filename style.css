@@ -79,3 +79,11 @@ canvas {
   .left {
     grid-column: 6 / 12;
   }
+img {
+  display: compact;
+
+
+  padding: 5px;
+  width: 30%;
+  height: 30%;
+}
