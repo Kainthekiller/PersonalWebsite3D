@@ -27,6 +27,7 @@ const spinningDonut = new THREE.Mesh(geometry, material);
 
 scene.add(spinningDonut);
 
+
 // Lights
 
 const pointLight = new THREE.PointLight(0xffffff);
@@ -79,7 +80,19 @@ const martianAttackFile = new THREE.TextureLoader().load("../Pic/Martian Attack/
 const martianAttack1 = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: martianAttackFile }));
 
 scene.add(martianAttack1);
-martianAttack1.position.z = 20;
+martianAttack1.position.z = 15;
+martianAttack1.position.x = 2;
+
+
+// Game of Life Box Image--------------------------------------------
+
+const gameOfLifeFile = new THREE.TextureLoader().load("../Pic/GameOfLife/GOL2.png");
+
+const gameOfLife1 = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: gameOfLifeFile }));
+
+scene.add(gameOfLife1);
+ gameOfLife1.position.z = 20;
+ gameOfLife1.position.x = -2;
 
 
 // Moon
