@@ -87,3 +87,11 @@ img {
   width: 30%;
   height: 30%;
 }
+.test img {
+  display: compact;
+
+
+  padding: 5px;
+  width: 20%;
+  height: 20%;
+}

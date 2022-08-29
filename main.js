@@ -95,6 +95,8 @@ scene.add(gameOfLife1);
  gameOfLife1.position.x = -2;
 
 
+
+
 // Moon
 
 const moonTexture = new THREE.TextureLoader().load('moon.jpg');
