@@ -25,7 +25,7 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const material = new THREE.MeshStandardMaterial({ color: 0x0d175e });
 const spinningDonut = new THREE.Mesh(geometry, material);
 
-scene.add(spinningDonut);
+//scene.add(spinningDonut);
 
 
 // Lights
@@ -101,7 +101,7 @@ const rimSkyFile = new THREE.TextureLoader().load("../Pic/rimsky/rimsky2.png");
 const rimSky1 = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: rimSkyFile }));
 
 scene.add(rimSky1);
-rimSky1.position.z = 30;
+rimSky1.position.z = 27;
 rimSky1.position.x = -1;
 
 //Pong Box
@@ -115,12 +115,12 @@ pong1.position.z = 45;
 pong1.position.x = -2;
 //Necro Box
 
-const necroFile = new THREE.TextureLoader().load("../Pic/The NEcromancer/Necro3.png");
+const necroFile = new THREE.TextureLoader().load("../Pic/The NEcromancer/Necro1.png");
 
 const necro1 = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: necroFile }));
 
 scene.add(necro1);
-necro1.position.z = 50;
+necro1.position.z = 65;
 necro1.position.x = -2;
 
 
@@ -194,6 +194,10 @@ function moveCamera() {
     necro1.rotation.x += 0.05;
     necro1.rotation.y += 0.075;
     necro1.rotation.z += 0.05;
+
+    pong1.rotation.x += 0.05;
+    pong1.rotation.y += 0.075;
+    pong1.rotation.z += 0.05;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
