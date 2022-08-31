@@ -94,6 +94,48 @@ scene.add(gameOfLife1);
  gameOfLife1.position.z = 20;
  gameOfLife1.position.x = -2;
 
+ //Rim Sky Box
+
+const rimSkyFile = new THREE.TextureLoader().load("../Pic/rimsky/rimsky2.png");
+
+const rimSky1 = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: rimSkyFile }));
+
+scene.add(rimSky1);
+rimSky1.position.z = 30;
+rimSky1.position.x = -1;
+
+//Pong Box
+
+const pongFile = new THREE.TextureLoader().load("../Pic/pong/pong1.png");
+
+const pong1 = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: pongFile }));
+
+scene.add(pong1);
+pong1.position.z = 45;
+pong1.position.x = -2;
+//Necro Box
+
+const necroFile = new THREE.TextureLoader().load("../Pic/The NEcromancer/Necro3.png");
+
+const necro1 = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: necroFile }));
+
+scene.add(necro1);
+necro1.position.z = 50;
+necro1.position.x = -2;
+
+
+
+//Zombie Game Box
+
+const zombieFile = new THREE.TextureLoader().load("../Pic/Zombie/zombie5.png");
+
+const zombie1 = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: zombieFile }));
+
+scene.add(zombie1);
+zombie1.position.z = 55;
+zombie1.position.x = -2;
+
+
 
 
 
@@ -132,6 +174,26 @@ function moveCamera() {
 
   myPic.rotation.y += 0.01;
   myPic.rotation.z += 0.01;
+
+    //ZombieRotation
+   zombie1.rotation.x += 0.05;
+    zombie1.rotation.y += 0.075;
+    zombie1.rotation.z += 0.05;
+
+    //RimSky Rotation
+    rimSky1.rotation.x += 0.05;
+     rimSky1.rotation.y += 0.075;
+    rimSky1.rotation.z += 0.05;
+
+  //Game of Life Rotation
+    gameOfLife1.rotation.x += 0.05;
+    gameOfLife1.rotation.y += 0.075;
+    gameOfLife1.rotation.z += 0.05;
+
+//Necro Rotation
+    necro1.rotation.x += 0.05;
+    necro1.rotation.y += 0.075;
+    necro1.rotation.z += 0.05;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
